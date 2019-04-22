@@ -14,10 +14,10 @@ Download the repository. Open the ```DownwardSpiral.xcodeproj``` file in Xcode. 
 After opening the project in Xcode, run the tests.  In the ```DownwardSpiralTests.swift``` file, click next to ```class DownwardSpiralTests: XCTestCase``` to run all tests in order of top to bottom.
 
 Once the tests have all passed, run the project in the iOS simulator.  You will be presented with a screen:
+
 Portrait: ![Potrait Image](portrait.png)
 
 Landscape: ![Landscape Image](landscape.png)
-Landscape
 
 There is a light dashed line at the FTP 1.0 horizontal line.  This line is to give you reference to the FTP of 1.0.  In addition, each entry is color coded.  Blue is an FTP of 1.0 and below.  Yellow is an FTP above 1.0 and below or equal to 1.26.  Orange is an FTP above 1.26 and below or equal to 1.64.  Red is an FTP above 1.64.
 
