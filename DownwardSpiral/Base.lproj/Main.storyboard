@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="DownwardSpiral" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ij-qy-Ck7">
+                                <rect key="frame" x="20" y="317" width="374" height="262"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="noL-CH-8al">
+                                        <rect key="frame" x="90" y="234" width="194" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="194" id="p3k-3H-JUM"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="FTP 0-2"/>
+                                            <segment title="FTP 0-3"/>
+                                            <segment title="FTP 0-4"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="fileSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="v0R-3v-iIn"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tJ-GQ-DhB" customClass="BasicBarChartView" customModule="DownwardSpiral" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="noL-CH-8al" secondAttribute="bottom" id="8Qa-Mv-qe3"/>
+                                    <constraint firstAttribute="height" constant="262" id="Abs-NO-jfF"/>
+                                    <constraint firstItem="noL-CH-8al" firstAttribute="top" secondItem="2tJ-GQ-DhB" secondAttribute="bottom" constant="18" id="OCL-C1-cgd"/>
+                                    <constraint firstAttribute="trailing" secondItem="2tJ-GQ-DhB" secondAttribute="trailing" id="QRS-uA-Fpz"/>
+                                    <constraint firstItem="2tJ-GQ-DhB" firstAttribute="top" secondItem="3ij-qy-Ck7" secondAttribute="top" id="VfV-3U-Ptg"/>
+                                    <constraint firstItem="2tJ-GQ-DhB" firstAttribute="leading" secondItem="3ij-qy-Ck7" secondAttribute="leading" id="hrl-AZ-pRB"/>
+                                    <constraint firstItem="noL-CH-8al" firstAttribute="centerX" secondItem="3ij-qy-Ck7" secondAttribute="centerX" id="sSJ-3B-hIY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ij-qy-Ck7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1lQ-9C-kip"/>
+                            <constraint firstItem="3ij-qy-Ck7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2VF-2e-GRA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ij-qy-Ck7" secondAttribute="trailing" constant="20" id="JYA-7C-TnD"/>
+                            <constraint firstItem="3ij-qy-Ck7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YGD-UW-nbc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="2tJ-GQ-DhB" id="KFk-Up-wBy"/>
+                        <outlet property="fileSelector" destination="noL-CH-8al" id="PXb-ss-XDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+</document>
