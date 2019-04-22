@@ -43,7 +43,7 @@ struct DataPointSet {
         case blue   = 1.0  // 1.0 and below
         case yellow = 1.26 // > 1.0 and <= 1.26
         case orange = 1.64 // > 1.26 and <= 1.64
-        case red    = 3.09 // > 1.64
+        case red    = 1.65 // > 1.64
     }
 
     private var _datapoints = [DataPoint]()
